@@ -32,6 +32,7 @@
     .help {
         font-family: $def_p_font, 'arial';
         font-size: $def_p_fs;
+        color: $font_color_light;
     
         &::before {
             content: 'Need help? ';
