@@ -1,1 +1,139 @@
-@import "../settings/variables";
+@import '../settings/_index.scss';
+@import '../global.scss';
+
+%list-reset {
+    list-style: none;
+}
+
+
+.product { 
+    &-section {
+        background-color: #f4f6f5;
+    }
+
+    &-description {
+        padding: 30px;
+        border-bottom: 1px solid #e7ecf2;
+    }
+
+    &-name {
+        font-size: 18px;
+        display: block;
+        margin: 0 0 15px;
+    }
+
+    &-category {
+        color: #8bc34a;
+        font-size: $default-font;
+    }
+
+    &-reiting {
+        padding: 20px 30px;
+
+        .vendor-item {
+
+            .img-holder {
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #b5b5b5;
+            width: 30px;
+            height: 30px;
+            margin-right: 14px; 
+            }
+
+            span {
+                font-size: $default-font;
+                color: #546e7a;
+            }
+        }
+        
+        &-holder {
+            .icon-holder {
+                margin-right: 14px;
+            }
+        }
+
+        &-text {
+            position: relative;
+            font-size: 12px;
+
+            &::before {
+                content: '(';
+                color: #b0bec5;
+            }
+
+            &:after {
+                content: ')';
+                color: #b0bec5;
+            }
+            
+        }
+    }
+}
+
+.tabs {
+    &-list {
+        margin: 0 0 30px;
+        li {
+            padding: 0 3px;
+
+            &.active-tab {
+                a {
+                    background-color: $red;
+                    color: $white;
+                }
+            }
+        }
+        
+        a {
+            @include animate(color background-color);
+            display: block;
+            padding: 14px 20px;
+            background-color: $white;
+            color: $defalt-font-color;
+
+            &:hover {
+                background-color: #fba097;
+                color: #fff;
+            }
+        }
+    }
+    
+    &-block {
+        padding: 30px 0;
+    }
+}
+
+.tabs-list {
+    @extend %list-reset;
+}
+
+.tab-col {
+    @include animate(box-shadow);
+
+    border: 1px solid #e7ecf2;
+    margin: 0 0 30px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0  15px 15px -7px #ccc;
+    }
+
+    &.hot-product {
+        position: relative;
+        
+        &::before {
+            @include triangle(65px, #8bc34a, up-left);
+            position: absolute;
+            content: '';
+            display: block; 
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .img-holder {
+        height: 250px;
+        background-color: #d4d4d4;
+    }
+}

@@ -1,10 +1,98 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/reset-css/reset';
-@import 'settings/index';
+@import 'settings/_index.scss';
 @import 'base/index';
 @import 'theme/index';
 
 
-header {
-    @extend %#{$ff-default};
+
+
+// @import 'plugins/_variables.scss';
+// @import 'pages/index.scss';
+
+$default-font: 14px;
+$item-title-font: 18px;
+$col-title-font: 24px;
+$footer-title-font: 22px;
+$col-font: 15px;
+$price-font: 20px;
+$section-title-font: 36px;
+$circle-item-font: 12px;
+$white: #fff;
+$defalt-font-color: #263238;
+$nickname-color: #546e7a;
+$green: #8bc34a;
+$red: #e74c3c;
+$stars-color: #ffa726;
+$light-p-color: #b7c3c8;
+$light-container: #f4f6f5;
+$medium-container: #b7b7b7;
+$dark-container: #263238;
+
+
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $defalt-font-color;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-size: $section-title-font;
+    margin: 0 0 60px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+
+    &-fluid {
+        max-width: 100%;
+    }
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.d-f {
+    display: flex;
+}
+
+.fw-w {
+    flex-wrap: wrap;
+}
+
+.ai-c {
+    align-items: center;    
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.fd-c {
+    flex-direction: column;   
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.col-4 {
+    width: 25%;
+    padding: 0 15px;
 }
