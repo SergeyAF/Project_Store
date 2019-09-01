@@ -32,6 +32,10 @@ body, *{
 a {
     text-decoration: none;
     color: inherit;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .container {
@@ -49,7 +53,7 @@ a {
 
 
 .row {
-width: 100%;
+margin: 0 -15px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -69,6 +73,11 @@ h4 {
     font-size: $h4_fs;
 }
 
+li {
+    &:focus {
+        outline: none;
+    }
+}
 
 .tabs-list {
     @extend %list-reset;
@@ -98,13 +107,38 @@ h4 {
     align-items: center;
 }
 
+.fd-c {
+    flex-direction: column;
+}
+
 .col {
-    width: 100%;
     padding: 0 15px;
     margin: 0 0 32px;
+    height: 100%;
+
+    &-4 {
+        width: 25%;
+    
+        @include media ('<=1024px') {
+            width: calc(100% / 3);
+        }
+    
+        @include media ('<=768px') {
+            width: 50%;
+        }
+    
+        @include media ('<=700px') {
+            width: 100%;
+        }
+    }
+
+    &-3 {
+        width: calc(100% / 3);
+    }
 }
 
-.col-4 {
-    width: 25%;
-}
 
+.index-header {
+    margin: 20px 0;
+    color: $active_color;
+}
