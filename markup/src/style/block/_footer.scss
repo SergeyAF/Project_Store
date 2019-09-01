@@ -1,4 +1,42 @@
-footer {
-    background: #000;
-    color: #fff;
+// footer {
+//     background-color: $conatiner_bg_dark;
+    
+    
+//     span {
+//         font-size: $h4_fs;
+//         color: $white;
+//         display: block;
+//     }
+//     p {
+//         color: red;
+//     }
+
+// }
+
+// .footer-title-line {
+//     width: 50px;
+//     height: 3px;
+//     color: $title-line-color;
+// 
+
+.footer-container {
+    
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-color: $conatiner_bg_dark;
+    
+    
+    span {
+        font-size: $h4_fs;
+        color: $white;
+        display: block;
+    }
+    p {
+        color: red;
+    }
+    .footer-title-line {
+        background-color: $title-line-color;
+        height: 3px;
+        width: 50px;
+    }
 }

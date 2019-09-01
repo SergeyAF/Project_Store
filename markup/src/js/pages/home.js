@@ -2,6 +2,6 @@
 
 let parJan = 3;
 
-$( function() {
-    $( ".tabs-block_holder" ).tabs();
-  } );
+$(function() {
+    $(".tabs-block_holder").tabs();
+});
