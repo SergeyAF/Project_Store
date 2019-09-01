@@ -1,3 +1,4 @@
-'use strict';
-
-let parJan = 3;
+// eslint-disable-next-line func-names
+$(function () {
+  $('.tabs').tabs();
+});
