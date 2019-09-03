@@ -60,12 +60,14 @@
             position: relative;
             color: $white;
             font-size: $footer-contact;
-            margin-bottom: 25px;
+            margin-bottom: 19px;
+            line-height: 1.75;
             
 
             i {
                 position: absolute;
-                top: 0;
+                top: 25%;
+                transform: translateY(-50%);
                 left: -35px;
             }
         }
@@ -82,7 +84,7 @@
             i {
                 transform: rotate(90deg);
                 position: absolute;
-                top: 0;
+                top: -2px;
                 left: -35px;
                 
             }
