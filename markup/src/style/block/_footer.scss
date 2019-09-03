@@ -130,16 +130,20 @@
             }
 
             li {
-                padding: 0 3px;
+                padding-right: 7px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
 
                 .icon-holder {
-                    height: 30px;
-                    width: 30px;
+                    height: 28px;
+                    width: 28px;
                     border-radius: 2px;
                     position: relative;
     
                     i {
-                        color: #c3c7ca;
+                        color: #fff;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -153,7 +157,7 @@
                     
                     i {
                         bottom: 0px;
-                        left: 17px;
+                        left: 18px;
                         font-size: 21px;
                     }
                 }
@@ -176,7 +180,9 @@
     
                 .linkedin-holder {
                     background-color: #1565c0;
-                    font-size: 15px;
+                    i {
+                        font-size: 15px;
+                    }
                     
                 }
             }
@@ -205,15 +211,16 @@
             font-size: 14px;
             border: none;
             color: #c3c7ca;
+            outline: none;
         }
 
         .footer-btn {
-            width:40px;
-            height: 40px;
+            width:39px;
+            height: 39px;
             position: absolute;
             background-color: $footer-col-first;
-            top: 0;
-            right: 0;
+            top: 1px;
+            right: 1px;
             outline: none;
             border: none;
             cursor: pointer;
