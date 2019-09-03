@@ -1,6 +1,13 @@
-Node Version Requirement
+Version Requirement
 ================================
+
+Node Version
+--------------------------------
 node 8.*
+
+Gulp Version
+--------------------------------
+gulp 3.9.1
 
 # Description of the assembly of Gulp, BEM and the work as a whole
 

@@ -1,1 +1,219 @@
-@import "../settings/variables";
+@import '../settings/index';
+@import '../global.scss';
+@import '../block/header';
+@import '../block/footer';
+
+.bg-block {
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.visual {
+    &-section {
+        min-height: 300px;
+    }
+
+    &-h {
+        color: #fff;
+        margin-bottom: 30px;
+    }
+}
+
+.input-holder {
+    width: 670px;
+
+    @include media('<=700px'){
+        width: 320px;
+    }
+    
+    input {
+        @include animate(box-shadow);
+        @include placeholder {
+        color: #90a4ae;
+        }
+
+        font-size: $product_category_fs;
+        border: none;
+        border-radius: 3px;
+        width: 100%;
+        height: 60px;
+        padding: 15px 25px;
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+        
+        &:focus,&:active {
+            box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+            outline: none;
+        }
+
+    }
+}
+
+.tabs {
+    &-list {
+        li {
+            padding: 0 3px;
+
+            @include media('<=tablet') {
+                margin-bottom: 6px;
+            }
+
+            &.ui-state-active {
+                a {
+                    background-color: $active_color;
+                    /* padding: 13px 27px; */
+                    color: #fff;
+                }
+
+                a:hover {
+                    background-color: #ec5849;
+                    color: #fff;    
+                }
+            }
+        }
+        a {
+            @include animate(color background-color);
+            
+            display: block;
+            padding: 13px 20px; 
+            background-color: #fff;
+            line-height: 1;
+            font-size: $product_category_fs;
+            color: $font_color_dark;
+
+            &:hover {
+                background-color: #ec5849;
+                color: #fff;
+            }
+        }
+
+    }
+}
+
+.hot-product {
+    position: relative;
+
+    &::before {
+        @include triangle (65px, $label_color, up-left);
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        
+    }
+
+    &::after {
+        position: absolute;
+        top: 12px;
+        left: 14px;
+        content: '\f0e7';
+        display: block;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-family: Font Awesome\ 5 Free;
+        font-weight: 900;
+        color: #fff;
+    }
+}
+
+.product-holder {
+    @include animate (box-shadow);
+    background-color: #fff;
+    border: 1px solid #e7ecf2;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 15px 15px -7px #ccc;
+    }
+
+    .img-holder {
+        display: block;
+        height: 250px;
+        background-color: #d4d4d4;
+    }
+
+    
+    .product-info {
+        padding: 20px 32px;
+        border-bottom: 1px solid #e7ecf2;
+
+        .pr-info_container {
+            
+            flex-direction: column;
+            align-items: flex-start;
+
+            .product-name {
+                font-size: $product_title_fs;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
+
+            .product-category {
+                font-size: $product_category_fs;
+                color: $label_color;
+            }
+        }
+
+        .product-price {
+            font-family: $def_h_font, 'arial';
+            font-size: $product_price_fs;
+            align-self: center;
+        }
+        
+    }
+
+    .vendor {
+        &-item {
+           
+        }
+
+        &-info {
+            padding: 17px 30px 21px;
+        }
+
+        &-logo {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #b5b5b5;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+
+        &-name {
+            color: $font_color_light;
+            font-size: $product_vendor_fs;
+        }
+    }
+    
+    .product-reiting {
+        &_holder {
+            .icon-holder {
+                margin-right: 12px;
+            }
+        }
+        &_text {
+
+            font-size: 12px;
+
+            &:before {
+                content: '(';
+                color: $font_p_color;
+            }
+
+            &:after {
+                content: ')';
+                color: $font_p_color;
+            }
+        }
+
+
+    }
+
+}
+
+
