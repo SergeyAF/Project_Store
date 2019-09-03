@@ -61,6 +61,9 @@
     &-holder{
         padding: 0 15px;
         width: calc(100% - 300px);
+        @include media ('<1024px') {
+            width: 100%;
+        }
     }
 
     .sorts-holder {
@@ -76,6 +79,7 @@
         background-color: $label_color;
         border: none;
         font-size: $header_info_fs;
+        outline: none;
 
         &:hover {
             color: $label_color;
@@ -104,9 +108,72 @@
     }
 }
 .aside {
+    @include animate (opacity visibility transform);
     padding: 0 15px;
     width: 300px;
 
+    @include media('<1024px'){
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f4f6f5;
+        overflow: hidden;
+        height: 85vh;
+        padding: 25px 15px;
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    &-close {
+        display: none;
+        position: fixed;
+        border: none;
+        background-color: transparent;
+        top: 3px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        outline: none;
+        cursor: pointer;
+        z-index: 10;
+        transform: translateX(-50%);
+
+        @include media('<1024px'){
+            display: block;
+
+        }
+    }
+    
+    &-opener {
+        display: none;
+        position: fixed;
+        outline: none;
+        cursor: pointer;
+        top: 160px;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: rgba(245, 243, 243, .25);
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.5);
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        @include media ('<1024px') {
+            display: block;
+        }
+    }
+
+    .active-aside & {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
     .bg-white {
         background-color: #fff;
         padding: 25px 30px;
@@ -267,4 +334,42 @@
 
     }
 
+}
+
+.price-slider {
+    padding: 30px 0 57px;
+
+    .irs {
+        &-bar {
+            height: 5px;
+            background-color: $conatiner_bg_dark;
+            top: 0;
+        }
+        &-line {
+            height: 5px;
+            background-color: #f2f5f8;
+        }
+        &-from, &-to {
+            top: 20px;
+            color: #78909c;
+            font-family: $def_p_font;
+            font-size: 15px;
+
+
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border: 3px solid $label_color;
+                top: -25px;
+                z-index: 15;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
 }
