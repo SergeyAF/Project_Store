@@ -68,6 +68,34 @@
     }
 }
 
+.btn-item {
+    &_def {
+        width: 100%;
+        height: 46px;
+        color: #fff;
+        background-color: $label_color;
+        border: none;
+        font-size: $header_info_fs;
+    }
+
+    &_search {
+        position: relative;
+        &::after {
+            content: '\f002';
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            display: block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+        }
+    }
+}
 .aside {
     padding: 0 15px;
     width: 300px;
