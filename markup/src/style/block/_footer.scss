@@ -13,6 +13,10 @@
         color: $white;
         margin-bottom: 25px;
         font-family: $footer_h_font, sans-serif;
+
+        @include media ('<=500px') {
+            margin-bottom: 20px;
+        }
     }
   
     
@@ -21,6 +25,10 @@
         height: 3px;
         width: 50px;
         margin-bottom: 30px;
+
+        @include media ('<=500px') {
+            margin-bottom: 20px;
+        }
     }
 
     &-line {
@@ -28,12 +36,20 @@
         height: 3px;
         width: 50px;
         margin-bottom: 30px;
+
+        @include media ('<=500px') {
+            margin-bottom: 20px;
+        }
     }
 
     &-p {
         color: $font-footer-color;
         margin-bottom: 40px;
         line-height: 1.5;
+
+        @include media ('<=500px') {
+            margin-bottom: 25px;
+        }
     }
 
     &-contact-holder {
@@ -109,6 +125,10 @@
         &-holder {
             margin-bottom: 40px;
 
+            @include media ('<=500px') {
+                margin-bottom: 25px;
+            }
+
             li {
                 padding: 0 3px;
 
@@ -121,46 +141,43 @@
                     i {
                         color: #c3c7ca;
                         position: absolute;
-                        top: 8px;
-                        left: 7px;
-                        font-size: 3x;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 18px;
                     }
                 }
     
                 .facebook-holder {
-                    background-color: #3a5482;
+                    background-color: #3b5998;
                     
                     i {
-                        top: 9px;
-                        left: 16px;
+                        bottom: 0px;
+                        left: 17px;
+                        font-size: 21px;
                     }
                 }
     
                 .twitter-holder {
-                    background-color: #4c8ebe;
-
-                    i {
-                        left: 8px;
-                    }
+                    background-color: #55acee;
                 }
     
                 .youtube-holder {
                     background-color: #e52d27;
                 }
     
-                .mail-holder {
-                    background-color: #c3c7ca;
+                .pinterest-holder {
+                    background-color: $white;
                     i {
-                        color: #951b2b;
+                        color: #bd081c;
+                        font-size: 21px;
                     }
                 }
     
                 .linkedin-holder {
                     background-color: #1565c0;
+                    font-size: 15px;
                     
-                    i {
-                        left: 9px;
-                    }
                 }
             }
         }
@@ -175,17 +192,19 @@
 
     &-input-holder {
         position: relative;
-        border: 2px solid #111;
-        border-bottom: none;
+        background-image: linear-gradient(to bottom, #000101 0%,#13191c 50%,#253136 100%);
+        padding: 1px;
+        z-index: 5;
         
         input {
             
-            background-color: $conatiner_bg_dark;
+            background-color: #2f3c43;
             height: 40px;
             width: 100%;
             padding-left: 15px;
             font-size: 14px;
             border: none;
+            color: #c3c7ca;
         }
 
         .footer-btn {
@@ -213,6 +232,11 @@
             padding-top: 85px;
             padding-bottom: 65px;
         }
+
+        @include media ('<=500px') {
+            padding-top: 70px;
+            padding-bottom: 45px;
+        }
     }
 
     &-down {
@@ -235,5 +259,13 @@
         @include media ('<=800px') {
             width: 100%;
         }
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    button:hover {
+        opacity: 0.7;
     }
 }
