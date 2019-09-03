@@ -20,8 +20,8 @@ module.exports = function () {
     return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
       .pipe($.gp.plumber({ errorHandler: $.gp.notify.onError('Error: <%= error.message %>') }))
       .pipe($.gp.newer($.pathObject.pathVar.path.build.jsPages))
-      .pipe($.gp.eslint())
-      .pipe($.gp.eslint.format())
+      // .pipe($.gp.eslint())
+      // .pipe($.gp.eslint.format())
       .pipe($.gp.sourcemaps.init())
       .pipe($.gp.babel({
         presets: ['env'],
@@ -53,8 +53,8 @@ module.exports = function () {
     return $.gulp.src($.pathObject.pathVar.path.src.js)
       .pipe($.gp.plumber({ errorHandler: $.gp.notify.onError('Error: <%= error.message %>') }))
       .pipe($.gp.newer($.pathObject.pathVar.path.html.js))
-      .pipe($.gp.eslint())
-      .pipe($.gp.eslint.format())
+      // .pipe($.gp.eslint())
+      // .pipe($.gp.eslint.format())
       .pipe($.gp.babel({
         presets: ['env'],
       }))
@@ -69,8 +69,8 @@ module.exports = function () {
     return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
       .pipe($.gp.plumber({ errorHandler: $.gp.notify.onError('Error: <%= error.message %>') }))
       .pipe($.gp.newer($.pathObject.pathVar.path.html.jsPages))
-      .pipe($.gp.eslint())
-      .pipe($.gp.eslint.format())
+      // .pipe($.gp.eslint())
+      // .pipe($.gp.eslint.format())
       .pipe($.gp.babel({
         presets: ['env'],
       }))
@@ -85,8 +85,8 @@ module.exports = function () {
     return $.gulp.src($.pathObject.pathVar.path.src.jsLibs)
       .pipe($.gp.newer($.pathObject.pathVar.path.html.js))
       .pipe($.gp.plumber({ errorHandler: $.gp.notify.onError('Error: <%= error.message %>') }))
-      .pipe($.gp.eslint())
-      .pipe($.gp.eslint.format())
+      // .pipe($.gp.eslint())
+      // .pipe($.gp.eslint.format())
       .pipe($.gp.babel({
         presets: ['env'],
       }))
@@ -104,8 +104,8 @@ module.exports = function () {
  */
 $.gulp.task('inline-configs:build', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
 
 /**
@@ -114,8 +114,8 @@ $.gulp.task('inline-configs:build', () => {
  */
 $.gulp.task('load-configs:build', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
 
 /**
@@ -124,8 +124,8 @@ $.gulp.task('load-configs:build', () => {
  */
 $.gulp.task('load-config-shorthands:build', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
 
 
@@ -135,8 +135,8 @@ $.gulp.task('load-config-shorthands:build', () => {
  */
 $.gulp.task('inline-configs:buildHtml', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
 
 /**
@@ -145,8 +145,8 @@ $.gulp.task('inline-configs:buildHtml', () => {
  */
 $.gulp.task('load-configs:buildHtml', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
 
 /**
@@ -157,6 +157,6 @@ $.gulp.task('load-config-shorthands:buildHtml', () => {
   return $.gulp.src($.pathObject.pathVar.path.src.jsPages)
 
   // Load a specific ESLint config
-    .pipe($.gp.eslint())
-    .pipe($.gp.eslint.format());
+    // .pipe($.gp.eslint())
+    // .pipe($.gp.eslint.format());
 });
