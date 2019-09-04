@@ -1,6 +1,11 @@
 @import '../settings/_index.scss';
 @import '../global.scss';
+<<<<<<< HEAD
 @import '../block/_header.scss';
+=======
+@import '../block/header';
+@import '../block/footer';
+>>>>>>> 87115ec23b847ab81ed99aa5e2640e76af934793
 
 .bg-block {
     background-position: 50% 0;
