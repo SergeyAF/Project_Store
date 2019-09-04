@@ -6,6 +6,13 @@ $(function () {
   asideClose();
 });
 
+$(function () {
+  console.log(15);
+  $('.product-sliders').slick({
+    dots:true
+  });
+});
+
 function rangeSlider() {
   /* console.log(58965); */
   if ($('#price-range').length) {
