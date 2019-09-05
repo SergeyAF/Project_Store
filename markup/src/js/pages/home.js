@@ -4,12 +4,8 @@ $(function () {
   rangeSlider();
   asideOpen();
   asideClose();
-});
-
-$(function () {
-  console.log(15);
   $('.product-sliders').slick({
-    dots:true
+    dots: true,
   });
 });
 
