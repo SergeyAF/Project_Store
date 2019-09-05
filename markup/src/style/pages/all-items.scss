@@ -71,7 +71,7 @@
 
 .all-items_sections {
     .container {
-        padding: 50px 15px;
+        padding: 50px 15px 110px;
     }
 }
 
@@ -82,11 +82,108 @@
         @include media ('<1024px') {
             width: 100%;
         }
-    }
 
-    .sorts-holder {
-        width: 100%;
+        .col-3 {
+            @include media  ('<768px') {
+                width: 50%;
+            }
+            @include media  ('<530px') {
+                width: 100%;
+            }
+        }
+        .sorts {
+            &-holder{
+                width: 100%;
+                padding: 0 15px;
+                margin-bottom: 30px;
+            }
+
+            &-type {
+                padding: 0 12px;
+            }
+            &-menu {
+                height: 60px;
+                background-color: #fff;
+                border: 1px solid #dfdfdf;
+                padding: 20px;
+                font-size: 14px;
+                font-family: $def_p_font;
+            
+                
+                &-list {
+                    .fas, .sorts-type{
+                        color: #707070;
+                    }
+
+                    .fa-sort {
+                        font-size: 18px;
+                        padding: 0 3px;
+
+                        &-amount-down {
+                            color: #455a64;
+                        }
+                    }
+                }
+
+                &-item_order {
+                    font-size: 16px;
+                    a {
+                        padding: 0 4px;
+                        
+                        .fas {
+                            color: #90a4ae;
+                        }
+
+                        .selected {
+                            color: $label_color;
+                        }
+                    }
+                }
+            }
+        }
+        .page-selector_active{
+                background-color: $active_color;
+                color: #fff;
+        }
     }
+}
+
+.page {
+    &-selector {
+        
+        &_holder {
+            width: 100%;
+            padding: 30px 15px 0;
+        }
+        
+        li {
+            display: block;
+            background-color: #fff;
+            margin-right: 8px;
+            line-height: 38px;
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                a {
+                   background-color: #ee6253;
+                   color: #fff; 
+                   box-shadow: 1px 3px 4px -1px #ccc;  
+                }
+            }
+
+            a {
+                display: block;
+                width: 43px;
+                height: 38px;
+                
+            }
+        }
+
+    }
+    
 }
 
 .btn-item {
@@ -137,7 +234,7 @@
         background-color: #f4f6f5;
         overflow: hidden;
         height: 85vh;
-        padding: 25px 15px;
+        padding: 30px 15px;
         box-shadow: 0 1px 10px rgba(100, 100, 100, 0.5);
         visibility: hidden;
         opacity: 0;
@@ -149,8 +246,8 @@
         position: fixed;
         border: none;
         background-color: transparent;
-        top: 3px;
-        right: 0;
+        top: 0px;
+        right: -10px;
         width: 22px;
         height: 22px;
         outline: none;
@@ -158,9 +255,16 @@
         z-index: 10;
         transform: translateX(-50%);
 
+        &:hover {
+            i{
+                color: $active_color;
+            }
+        }
+
         @include media('<1024px'){
             display: block;
-
+            width: 30px;
+            height: 30px;
         }
     }
     
@@ -169,7 +273,7 @@
         position: fixed;
         outline: none;
         cursor: pointer;
-        top: 160px;
+        top: 390px;
         left: 0;
         width: 30px;
         height: 30px;
@@ -179,6 +283,10 @@
 
         &:hover {
             background-color: #fff;
+
+            i {
+                color: $active_color;
+            }
         }
 
         @include media ('<1024px') {
