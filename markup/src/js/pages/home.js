@@ -51,15 +51,9 @@ function asideOpen() {
 		} else {
 			$('body').addClass('active-aside');
 		}
+  $('.tabs').tabs();
+  $('.product-sliders').slick({
+    dots: true,
   });
-}
-
-function asideClose() {
-	$('.aside-close').on('click', function(){
-		if($('body').hasClass('active-aside')){
-			$('body').removeClass('active-aside');
-		} else {
-			$('body').addClass('active-aside');
-		}
-	});
+});
 }

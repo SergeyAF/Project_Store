@@ -2,60 +2,34 @@
 @import '../global.scss';
 @import '../block/header';
 @import '../block/footer';
-
-.bg-block {
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.visual {
-    &-section {
-        min-height: 300px;
-    }
-
-    &-h {
-        color: #fff;
-        margin-bottom: 30px;
-    }
-}
-
-.input-holder {
-    width: 670px;
-
-    @include media('<=700px'){
-        width: 320px;
-    }
-    
-    input {
-        @include animate(box-shadow);
-        @include placeholder {
-        color: #90a4ae;
-        }
-
-        font-size: $product_category_fs;
-        border: none;
-        border-radius: 3px;
-        width: 100%;
-        height: 60px;
-        padding: 15px 25px;
-        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
-        
-        &:focus,&:active {
-            box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
-            outline: none;
-        }
-
-    }
-}
+@import '../block/search_section';
+@import '../settings/slick.scss';
+@import '../settings/slick-theme.scss';
 
 .tabs {
     &-list {
+        margin: 0 0 60px;
+
+        @include media('<=768px') {
+            margin: 0 0 45px;
+        }
+
+        @include media('<=550px') {
+            margin: 0 0 30px;
+        }
+
+        @include media('<=375px') {
+            margin: 0 0 20px;
+        }
         li {
             padding: 0 3px;
 
             @include media('<=tablet') {
                 margin-bottom: 6px;
+            }
+
+            @include media('<=550px') {
+                margin-bottom: 14px;
             }
 
             &.ui-state-active {
@@ -141,6 +115,12 @@
         padding: 20px 32px;
         border-bottom: 1px solid #e7ecf2;
 
+        @include media('<=375px') {
+            flex-direction: column;
+            padding: 15px 32px;
+        }
+
+
         .pr-info_container {
             
             flex-direction: column;
@@ -155,6 +135,11 @@
             .product-category {
                 font-size: $product_category_fs;
                 color: $label_color;
+
+                @include media('<=375px') {
+                    margin-bottom: 15px;
+                    font-size: 12px;
+                }
             }
         }
 
@@ -162,6 +147,12 @@
             font-family: $def_h_font, 'arial';
             font-size: $product_price_fs;
             align-self: center;
+
+            @include media('<=375px') {
+                align-self: flex-start;
+            }
+
+            
         }
         
     }
@@ -173,6 +164,10 @@
 
         &-info {
             padding: 17px 30px 21px;
+
+            @include media('<=375px') {
+                display: block;
+            }
         }
 
         &-logo {
@@ -195,6 +190,10 @@
             .icon-holder {
                 margin-right: 12px;
             }
+
+            @include media('<=375px') {
+                justify-content: flex-end;
+            }
         }
         &_text {
 
@@ -216,4 +215,105 @@
 
 }
 
+.home-button-list {
+    padding-top: 80px;
+    padding-bottom: 105px;
 
+    @include media ('<=768px') {
+        padding-top: 60px;
+        padding-bottom: 85px;
+    }
+
+    @include media('<=768px') {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    @include media('<=550px') {
+        padding-top: 55px;
+        padding-bottom: 70px;
+    }
+    @include media('<=375px') {
+        padding-top: 30px;
+        padding-bottom: 40px;   
+    }
+
+    li {
+        padding: 0 7px;
+
+        .home-btn {
+            @include media('<=375px') {
+                margin-bottom: 10px;
+                
+            }
+        }
+    }
+}
+
+
+.slider {
+    
+    &-section {
+        
+        .col-4 {
+            @include media ('<=1440px') {
+                width: 50%;
+            }
+
+            @include media ('<=700px') {
+                width: 100%;
+            }
+        }
+
+        .slick-dots {
+            bottom: -60px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include media ('<=550px') {
+                bottom: -40px;
+            }
+
+            @include media ('<=375px') {
+                bottom: -30px;
+            }
+
+            li {
+                padding: 0 2px;
+            }
+
+            button {
+                background-color: #e8e8e8;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid #b5b5b5;
+            }
+
+            .slick-active button {
+                background-color: $label_color;
+            }
+        }
+
+        .container-fluid {
+            background-color: $white;
+            padding-bottom: 120px;
+
+            @include media ('<=1280px') {
+                padding-bottom: 80px;
+            }
+
+            @include media ('<=550px') {
+                padding-bottom: 50px;
+            }
+
+            @include media ('<=375px') {
+                padding-bottom: 35px;
+            }
+            
+            .sliders {
+                outline: none;
+            }
+        }
+    }
+}
