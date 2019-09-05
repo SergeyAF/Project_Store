@@ -23,23 +23,13 @@ function rangeSlider() {
 }
 
 $(function () {
-<<<<<<< HEAD
   $('#tabs').tabs();
-});
-
-
-
-
-
-=======
-  $('.tabs').tabs();
   rangeSlider();
   asideOpen();
   asideClose();
 });
 
 function rangeSlider() {
-  /* console.log(58965); */
   if ($('#price-range').length) {
     $('#price-range').ionRangeSlider({
       type: 'double',
@@ -73,4 +63,3 @@ function asideClose() {
 		}
 	});
 }
->>>>>>> 87115ec23b847ab81ed99aa5e2640e76af934793

@@ -6,11 +6,6 @@
 @import 'settings/variables';
 
 
-/* header {
-    @extend %#{$ff-default};
-} */
-
-
 span {
     color: $font_color_dark;
 }
@@ -145,4 +140,48 @@ li {
 .index-header {
     margin: 20px 0;
     color: $active_color;
+}
+
+.breadcrumbs {
+    &-holder {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 0 40px;
+    }
+
+    &-nav {
+        &_list {
+            margin: 0 -10px;
+
+            li {
+                position: relative;
+                padding: 0 10px;
+                font-size: 14px;
+                font-family: $def_p_font, sans-serif;
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '-';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -4px;
+                    color: #8bc34a;
+                }
+
+                a {
+                    color: $font_p_color;
+                    &:hover {
+                        color: $label_color;
+                        font-family: $def_h_font;
+                    }
+                }
+            }
+        }
+    }
 }
