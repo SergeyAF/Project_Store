@@ -2,79 +2,9 @@
 @import '../global.scss';
 @import '../block/header';
 @import '../block/footer';
+@import '../block/search_section';
 @import '../settings/slick.scss';
 @import '../settings/slick-theme.scss';
-
-.bg-block {
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.visual {
-    &-section {
-        padding: 150px 0;
-
-        @include media('<=768px'){
-            padding: 90px 0;
-        }
-
-        @include media('<=550px'){
-            padding: 65px 0;
-        }
-    }
-
-    &-h {
-        color: #fff;
-        margin-bottom: 30px;
-        font-size: $title_p_fs;
-
-        @include media('<=768px'){
-            font-size: 18px;
-            margin-bottom: 45px;
-            text-align: center;
-        }
-
-        @include media('<=550px'){
-            font-size: 16px;
-        }
-    }
-}
-
-.input-holder {
-    width: 670px;
-
-    @include media('<=768px'){
-        width: 420px;
-    }
-
-    @include media('<=550px'){
-        width: 100%;
-    }
-
-
-    
-    input {
-        @include animate(box-shadow);
-        @include placeholder {
-        color: #90a4ae;
-        }
-
-        font-size: $product_category_fs;
-        border: none;
-        border-radius: 3px;
-        width: 100%;
-        height: 60px;
-        padding: 15px 25px;
-        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
-        
-        &:focus,&:active {
-            box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
-            outline: none;
-        }
-
-    }
-}
 
 .tabs {
     &-list {
