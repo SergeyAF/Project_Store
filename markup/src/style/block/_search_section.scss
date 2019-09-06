@@ -24,13 +24,14 @@
             @include media('<=768px'){
                 width: 420px;
             }
-        
-            @include media('<=550px'){
-                width: 100%;
-            }
 
             @include media('<=700px'){
-                width: 320px;
+                width: 420px;
+            }
+
+            
+            @include media('<=550px'){
+                width: 100%;
             }
 
             .fa-search {
@@ -66,24 +67,44 @@
     }
 
     &-head {
-        display: block;
-        font-size: 48px;
-        color: #fff;
-        margin-bottom: 27px;
+        font-size: $h1_fs;
+        margin: 0 0 35px;
+        color: $white;
+    
+        @include media('<=1024px'){
+            margin: 0 0 25px;
+        }
+        @include media('<=768px'){
+            font-size: 32px;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+    
+        @include media('<=550px'){
+            font-size: 28px;
+            margin: 0 0 15px;
+        }
     }
+
     &-h {
         font-size: 20px;
         color: #fff;
         margin-bottom: 55px;
 
-        @include media('<=768px'){
+        @include media('<=1024px'){
             font-size: 18px;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        @include media('<=768px'){
+            margin-bottom: 30px;
             text-align: center;
         }
 
         @include media('<=550px'){
             font-size: 16px;
+            margin-bottom: 25px;
         }
     }
 }
