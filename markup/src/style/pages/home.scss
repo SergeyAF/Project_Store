@@ -6,6 +6,21 @@
 @import '../settings/slick.scss';
 @import '../settings/slick-theme.scss';
 
+.visual {
+    &-section {
+        padding: 151px 0;
+        .input-holder {
+            margin-bottom: 24px;
+        }
+    }
+    &-head {
+        display: block;
+    }
+    &-h {
+        margin-bottom: 55px;
+    }
+}
+
 .tabs {
     &-list {
         margin: 0 0 60px;

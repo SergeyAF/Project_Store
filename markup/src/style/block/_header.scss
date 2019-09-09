@@ -14,20 +14,22 @@
 }
 
 .btn {
+    cursor: pointer;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+
     &-header {
+        cursor: pointer;
+        border: none;
         height: 32px;
         width: 72px;
-        border: none;
         background-color: #fff;
         color: #fff;
         font-family: $def_p_font;
         font-size: $header_buton_fs;
         border-radius: 3px;
-        cursor: pointer;
-
-        &:focus {
-            outline: none;
-        }
         &:hover {
             opacity: 0.8;
         }
@@ -45,6 +47,52 @@
     &-logout {
         background-color: $active_color;
         display: none;
+    }
+   
+    &-form {
+        font-family: $def_h_font;
+        text-transform: uppercase;
+        color: #000;
+        display: block;
+        background-color: $white;
+        font-size: 14px;
+        padding: 16px 20px;
+        width: 140px;
+        text-align: center;
+        margin-right: 10px;
+        box-shadow: 0 2px 1px rgba(118, 174, 54, 0.75);
+
+        &:hover {
+            color: #fff;
+            background-color: $active_color;
+            box-shadow: none;
+        }
+    }
+
+    &-create {
+        width: calc(100% - 150px);
+        position: relative;
+        background-color: #76ae36;
+        color: $white;
+        font-size: 18px;
+        font-family: $def_p_font;
+        padding: 16px 20px 16px 66px;
+        display: block;
+
+        &:hover {
+            color: $active_color;
+            background-color: #fff;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 35px;
+            color: inherit;
+
+        }
+
     }
 }
 
@@ -148,4 +196,129 @@
 
     }
 
+}
+
+.login {
+    &-form {
+        max-width: 400px;
+        margin: 0 auto 23px;
+
+        &_popup {
+            background-color: $label_color;
+            padding: 84px 90px 112px;
+            position: relative;
+            z-index: 1;
+
+            .lost {
+                color: #fff;
+                font-family: $def_p_font;
+                font-size: 18px;
+                &:hover {
+                    color: #000;
+                }
+
+                &-holder{
+                    display: block;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .modal-input-holder {
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+
+            input {
+                @include placeholder {
+                    color: $white;
+                }
+                font-family: $def_p_font;
+                font-size: 14px;
+                width: 100%;
+                background-color: #76ae36;
+                border: none;
+                height: 43px;
+                padding: 10px 40px;
+            }
+
+            i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+       
+    }
+
+    &-pass_holder{
+        margin-bottom: 19px;
+    }
+
+    &-title {
+        font-family: $def_h_font;
+        text-transform: uppercase;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 36px;
+        cursor: default;
+    }
+}
+
+.ui-dialog {
+    position: fixed !important;
+    outline: none;
+    
+
+    &::before {
+        position: fixed;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: .6;
+        z-index: -1;
+    }
+
+    .ui-button-icon {
+        &-only {
+            font-size: 0 !important;
+            line-height: 0 !important;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            position: absolute;
+            top: 33px;
+            right: 24px;
+            z-index: 2; 
+            cursor: pointer;
+        }
+        &-space  {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1 !important;
+            font-size: 16px !important;
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+            color: #fff;
+
+            &::before {
+                content: '\f00d';
+            }
+        }
+    }
 }

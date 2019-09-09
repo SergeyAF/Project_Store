@@ -6,7 +6,7 @@
 
 .visual {
     &-section {
-        padding: 151px 0;
+        padding: 59px 0;
         background-image: url(../../images/visual-bg.jpg);
         
         @include media('<=768px'){
@@ -19,7 +19,7 @@
         .input-holder {
             position: relative;
             width: 670px;
-            margin-bottom: 24px;
+            margin-bottom: 10px;
 
             @include media('<=768px'){
                 width: 420px;
@@ -70,6 +70,7 @@
         font-size: $h1_fs;
         margin: 0 0 35px;
         color: $white;
+        display: none;
     
         @include media('<=1024px'){
             margin: 0 0 25px;
@@ -89,7 +90,7 @@
     &-h {
         font-size: 20px;
         color: #fff;
-        margin-bottom: 55px;
+        margin-bottom: 25px;
 
         @include media('<=1024px'){
             font-size: 18px;

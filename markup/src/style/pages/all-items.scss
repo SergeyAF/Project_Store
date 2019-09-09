@@ -4,22 +4,6 @@
 @import '../block/footer';
 @import '../block/search_section';
 
-// update search section
-.visual {
-    &-section {
-        padding: 59px 0;
-        .input-holder {
-            margin-bottom: 10px;
-        }
-    }
-    &-head {
-        display: none;
-    }
-    &-h {
-        margin-bottom: 25px;
-    }
-}
-// --------------------
 
 .main {
     background-color: #f4f6f5;
@@ -415,11 +399,7 @@
     }
 
     .vendor {
-        &-item {
-           
-        }
-
-        &-info {
+         &-info {
             padding: 17px 20px 21px;
         }
 
