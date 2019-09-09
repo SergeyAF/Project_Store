@@ -9,50 +9,6 @@
     background-color: #f4f6f5;
 }
 
-.breadcrumbs {
-    &-holder {
-        width: 100%;
-        padding: 0 15px;
-        margin: 0 0 40px;
-    }
-
-    &-nav {
-        &_list {
-            margin: 0 -10px;
-
-            li {
-                position: relative;
-                padding: 0 10px;
-                font-size: 14px;
-                font-family: $def_p_font, sans-serif;
-
-                &:last-child {
-                    &::after {
-                        display: none;
-                    }
-                }
-
-                &::after {
-                    position: absolute;
-                    content: '-';
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: -4px;
-                    color: #8bc34a;
-                }
-
-                a {
-                    color: $font_p_color;
-                    &:hover {
-                        color: $label_color;
-                        font-family: $def_h_font;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .all-items_sections {
     .container {
         padding: 50px 15px 110px;
@@ -444,48 +400,39 @@
 
 }
 
-.range {
+.price-slider {
+    padding: 30px 0 57px;
 
-    &-slider {
+    .irs {
+        &-bar {
+            height: 5px;
+            background-color: $conatiner_bg_dark;
+            top: 0;
+        }
+        &-line {
+            height: 5px;
+            background-color: #f2f5f8;
+        }
+        &-from, &-to {
+            top: 20px;
+            color: #78909c;
+            font-family: $def_p_font;
+            font-size: 15px;
 
-        &-wrap {
 
-            padding: 40px 8px 0 7px;
-            margin-bottom: 52px;
-            .irs {
-
-                &-bar {
-                    height: 5px;
-                    background-color: #37474f;
-                }
-
-                &-line {
-                    height: 5px;
-                    background-color: #fff;
-                }
-
-                &-from,
-                &-to {
-                    color: #ccc;
-                    top: 20px;
-                    font-size: 15px;
-                    
-                    &:before {
-                        position: absolute;
-                        content: '';
-                        display: block;
-                        border-radius: 3px;
-                        width: 10px;
-                        height: 10px;
-                        background-color: #fff;
-                        border: 3px solid #8bc34a;
-                        top: -22px;
-                        z-index: 10;
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
-
-                }
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border: 3px solid $label_color;
+                top: -25px;
+                z-index: 15;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
