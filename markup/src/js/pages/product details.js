@@ -1,0 +1,3 @@
+$( function() {
+    $( ".product-tabs" ).tabs();
+  } );
