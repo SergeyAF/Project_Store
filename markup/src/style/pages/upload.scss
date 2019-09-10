@@ -1,0 +1,11 @@
+@import '../settings/index';
+@import '../global.scss';
+@import '../block/header';
+@import '../block/footer';
+@import '../block/search_section';
+
+.upload_section {
+    .container {
+        padding: 50px 15px 110px;
+    }
+}

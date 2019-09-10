@@ -4,23 +4,6 @@
 @import '../block/_footer.scss';
 @import '../block/search_section';
 
-.bg-block {
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.visual {
-    &-section {
-        min-height: 300px;
-    }
-
-    &-h {
-        color: #fff;
-        margin-bottom: 30px;
-    }
-}
-
 .input-holder {
     width: 670px;
 
