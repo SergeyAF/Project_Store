@@ -1,10 +1,112 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/reset-css/reset';
-@import 'settings/index';
+@import 'settings/_index.scss';
 @import 'base/index';
 @import 'theme/index';
 
-
-header {
-    @extend %#{$ff-default};
+%list-reset{
+    list-style: none;
 }
+
+body,
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #263238;
+}
+
+.main { 
+    background-color: #f4f6f5;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    font-size: 36px;
+    margin: 60px;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-fluid {
+        max-width: 100%;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.row{
+    margin: 0 -15px;
+
+}
+
+.d-b {
+    display: block;
+}
+
+.d-f{
+    display: flex;
+}
+
+.fw-w{
+    flex-wrap: wrap;
+}
+
+.jc-c{
+    justify-content: center;
+}
+
+.ai-c{
+    align-items: center;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.jc-sb{
+    justify-content: space-between;
+}
+
+.col {
+    padding: 0 15px;
+
+    &-4 {
+        width: 25%;
+        
+        @include media('<=1024px') {
+            width: calc(100% / 3);
+        }
+    
+        @include media('<=768px') {
+            width: 50%;
+        }
+    
+        @include media('<=700px') {
+            width: 100%;
+        }
+    }
+
+    &-3 {
+        width: calc(100% / 3);
+        
+        @include media('<=768px') {
+            width: 50%;
+        }
+    
+        @include media('<=700px') {
+            width: 100%;
+        }
+    }
+}
+

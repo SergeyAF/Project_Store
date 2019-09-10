@@ -1,1 +1,295 @@
-@import "../settings/variables";
+@import '../settings/_index.scss';
+@import '../global.scss';
+
+
+%list-reset{
+    list-style: none;
+}
+
+.input-holder {
+  width: 670px;
+
+  input {
+    @include animate(box-shadow);
+    @include placeholder {
+      color: #90a4ae;
+    }
+
+    border: none;
+    width: 100%;
+    height: 60px;
+    padding: 15px 25px;
+    box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+
+    &:focus,
+    &:active {
+      box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+      outline: none;
+    }
+  }
+}
+
+.bg-blick{
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.visual {
+  &-section {
+    min-height: 300px;
+  }
+}
+
+.product {
+  &-section {
+    background-color: #f4f6f5;
+  }
+
+  &-description {
+    padding: 30px 10px;
+    border-bottom: 1px solid #e7ecf2;
+  }
+
+  &-name {
+    font-size: 18px;
+    display: block;
+    margin: 0 0 15px;
+  }
+
+  &-category {
+    color: #8bc34a;
+    font-size: 14px;
+  }
+
+  &-reiting {
+    padding: 20px 15px;
+
+    .vendor-item {
+      
+      .img-holder {
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #b5b5b5;
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+      }
+      
+      span {
+        color: #546e7a;
+        font-size: 14px
+      }
+    }
+
+    &_holder {
+      .icon-holder {
+        margin-right: 14px;
+      }
+    }
+
+    &_text {
+      position: relative;
+      font-size: 12px;
+
+      &:before {
+        content: '(';
+        color: #b0bec5;
+      }
+      &:after {
+        content: ')';
+        color: #b0bec5;
+      }
+    }
+ 
+  }
+}
+
+.tabs {
+  &-list {
+    @extend %list-reset;
+
+    margin: 0 0 30px;
+
+    li{
+      padding: 0 3px;
+
+      @include media('<=tablet') {
+        margin-bottom: 6px;
+      }
+
+      &.active-tab{
+        a{
+          background-color: #e74c3c;
+          color: #fff;
+        }
+      }
+    }
+
+    a{
+      @include animate(color background-color);
+
+      display: block;
+      background-color: #fff;
+      color: #263238;
+      padding: 10px 30px;
+
+      &:hover {
+        background-color: #da6e63;
+        color: #fff;
+      }
+
+    }
+  }
+
+  &-block {
+    padding: 30px 0;
+  }
+}
+
+.tab-col {
+  @include animate(box-shadow);
+
+  border: 1px solid #e7ecf2;
+  margin: 0 0 30px;
+  cursor: pointer;
+
+  &.hot-product {
+    position: relative;
+
+    &::before {
+      @include triangle(65px, #8bc34a, up-left);
+
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      left: 0;
+    }
+
+
+    &:after {
+      position: absolute;
+      content: "\f0e7";
+      display: block;
+      top: 14px;
+      left: 14px;
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: font Awesome\ 5 Free;
+      font-weight: 900;
+      color: #fff;
+    }
+  }
+  
+ 
+
+
+  &:hover {
+    box-shadow: 0 15px 15px -7px #ccc;
+  }
+
+  .img-holder {
+    height: 250px;
+    background-color: #d4d4d4d4;
+  }
+}
+
+.breadcrumbs {
+  &-holder {
+    widows: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px;
+  }
+
+  &-nav {
+    &_list {
+      margin: 0 -10px;
+
+      li {
+        position: relative;
+        padding: 0 10px;
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: '-';
+          top: 50%;
+          transform: translateY(-50%);
+          right: -4px;
+          color: #8bc34a;
+        }
+      }
+    }
+  }
+}
+
+.aside {
+  padding: 0 15px;
+  width: 300px;
+}
+
+.bg-white {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin: 0 0 30px;
+
+}
+ 
+.product {
+  &-holder {
+    padding: 0 15px;
+    width: calc(100% - 300px);
+  }
+}
+
+.upload {
+
+  &-holder {
+    padding: 0 15px;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    background-color: #fff;
+    
+    .sorts-holder {
+      color: #263238;
+      font-size: 24px;
+      padding: 21px 35px;
+    }
+  }
+}
+
+
+
+.blank {
+  padding: 15px;
+  width: 100%;
+  background-color: #fff;
+  
+  .holder {
+    margin: 12px 33px;
+    padding: 16px 0;
+  
+    .sorks {
+      margin: 0 0 50px;
+    }
+  }
+  
+
+  .input-holder{ 
+    box-shadow: none;
+  }
+}
+
+.sorts-holder{
+  padding: 30px 0;
+}
