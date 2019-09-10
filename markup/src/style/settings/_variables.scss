@@ -89,3 +89,55 @@ $font-type: ($ff-stress: $fw-italic, $ff-default: $fw-bold );
 //body {
 //    @extend %#{$ff-default};
 //}
+
+
+$header_color: #fff;
+
+$conatiner_bg_light: #f4f5f6;
+$conatiner_bg_dark: #263238;;
+
+$product_img_bg: #d4d4d4;
+$slider_bg: #fff;
+
+$label_color: #8bc34a;
+$active_color: #e74c3c;
+$stars_color: #ffa726;
+$footer-col-first: #729e4c;
+
+/* --- Fonts --- */
+
+$def_font: 'roboto_medium';
+$def_h_font: 'roboto_bold';
+$def_p_font: 'roboto_regular';
+
+$footer_h_font: 'raleway_bold';
+$footer_info_font: 'lato_semibold';
+
+/* --- Font Color --- */
+
+$title_font_color: #fff;
+$font_color_dark: #263238;
+$font_color_light: #546e7a;
+$font_p_color: #b0bec5;
+$font-footer-color: #b7c3c8;
+
+/* --- Font Size`s --- */
+
+$h1_fs: 48px; // header
+$h2_fs: 36px; // container head
+$h3_fs: 24px; // choose us & tutorial
+$h4_fs: 22px; // used in footer
+$title_p_fs: 20px;
+$def_p_fs: 15px;
+
+$header_menu_fs: 14px; // header menu, search and butons in newest products
+$header_info_fs: 15px; 
+$header_buton_fs: 12px;
+$footer-contact: 14px;
+
+$product_title_fs: 18px;
+$product_price_fs: 20px;
+$product_category_fs: 14px;
+$product_vendor_fs: 14px;
+
+//--------------------------------------

@@ -1,214 +1,322 @@
-//= ../pages-head/home-head.html
+//= ../pages-head/all-items-head.html
+
 <body>
     <div class="wrapper">
         //= ../block/header.html
-			<main class="main">
-				<section class="all-items_section">
-					<div class="container">
-						<div class="row d-f">
-							<div class="breadcrumbs-holder">
-								<ul class="breadcrumbs-nav_list d-f">
-									<li><a href="#">Home</a></li>
-									<li><span>  Prodcut Page</span></li>
-								</ul>
-								<aside class="aside">
-									<div class="bg-white">
-										<strong>Categories</strong>
-									</div>
-									<div class="bg-white">
-										<strong>Categories</strong>
-									</div>
-									<div class="bg-white">
-										<strong>Categories</strong>
-									</div>
-								</aside>
-							</div>
-							<div class="product-holder">
-								<div class="row d-f fw-w">
-									<div class="sorts-holder">
+        <main class="main">
+            <section class="all-items_sections p-r">
+                //= ../block/search_section.html
+                <div class="container">
+                    <div class="row d-f fw-w">
+                        <div class="breadcrumbs-holder">
+                            <ul class="breadcrumbs-nav_list d-f">
+                                <li><a href="home.html">Home</a></li>
+                                <li><span>Product Page</span></li>
+                            </ul>
+                        </div>
+                        <button class='aside-opener'><i class="fas fa-angle-right"></i></button>
+                        <aside class="aside">
+                            <button class='aside-close'><i class="fas fa-angle-left"></i></button>
+                            <div class="bg-white">
+                                <strong class="aside-component_name">Categories</strong>
+                                <span class="h-line"></span>
+                                <div class="categories-list_holder">
+                                    <ul class="categories-list">
+                                        <li class="d-f fw-w jc-sb">
+                                            <a href="#">WordPress</a>
+                                            <span class="product-quantity">(150)</span>
+                                        </li>
+                                        <li class="d-f fw-w jc-sb">
+                                            <a href="#">Joomla</a>
+                                            <span class="product-quantity">(100)</span>
+                                        </li>
+                                        <li class="d-f fw-w jc-sb">
+                                            <a href="#">PSD</a>
+                                            <span class="product-quantity">(50)</span>
+                                        </li>
+                                        <li class="d-f fw-w jc-sb">
+                                            <a href="#">Plugins</a>
+                                            <span class="product-quantity">(60)</span>
+                                        </li>
+                                        <li class="d-f fw-w jc-sb">
+                                            <a href="#">Components</a>
+                                            <span class="product-quantity">(40)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg-white">
+                                <strong class="aside-component_name">Price Range</strong>
+                                <span class="h-line"></span>
+                                <div class="price-slider">
+                                    <input type="text" id="price-range" name="price-range" value="">
+                                </div>
+                                <button class="btn-item_def btn-item_search">Search</button>
+                            </div>
+                            <div class="bg-white">
+                                <strong class="aside-component_name">Top 10 Sellers</strong>
+                                <span class="h-line"></span>
+                                <div class="">
 
-									</div>
-									<div class="col col-3">
-										<div class="tab-col">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">Responsive Mobile APP</span>
-													<span class="product-category">Site Template</span>
-												</div>
-												<span class="product-price">$19</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span>Radiustheme</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="tab-col hot-product">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">The Post Grid Pro</span>
-													<span class="product-category">WordPress Plugin</span>
-												</div>
-												<span class="product-price">$15</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span>PsdBosS</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="tab-col">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">Food Menu</span>
-													<span class="product-category">WordPress Plugin</span>
-												</div>
-												<span class="product-price">$20</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span>Manilip</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="tab-col">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">Imac Mockup</span>
-													<span class="product-category">Psd Template</span>
-												</div>
-												<span class="product-price">$12</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span>Lolypop</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="tab-col">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">Gymedge</span>
-													<span class="product-category">Joomla Template</span>
-												</div>
-												<span class="product-price">$45</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span></span>
-													<span>Micrsof</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="tab-col">
-											<div class="img-holder">
-	
-											</div>
-											<div class="product-description d-f fw-w ai-c jc-sb">
-												<div class="text-holder d-f fd-c">
-													<span class="product-name">Gymedge</span>
-													<span class="product-category">Joomla Template</span>
-												</div>
-												<span class="product-price">$45</span>
-											</div>
-											<div class="product-reiting d-f fw-w ai-c jc-sb">
-												<div class="vendor-item d-f ai-c">
-													<div class="img-holder">
-													
-													</div>
-													<span></span>
-													<span>Micrsof</span>
-												</div>
-												<div class="product-reiting_holder d-f ai-c">
-													<div class="icon-holder">
-														<img src="../../images/start-img.png" alt="image description">
-													</div>
-													<span class="product-reiting_text">05</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main> 
-        //=../block/footer.html
+                                </div>
+                                <button class="btn-item_def">View All</button>
+                            </div>
+                        </aside>
+                        <div class="products-holder">
+                            <div class="row d-f fw-w">
+                                <div class="sorts-holder">
+                                    <div class="sorts-menu d-f fw-w ai-c jc-sb">
+                                        <div class="sorts-menu-list d-f fw-w ai-c">
+                                            <a href="#"><i class="fas fa-sort-amount-down"></i></a>
+                                            <a class="d-f fw-w ai-c" href="#">
+                                                <span class="sorts-type">Sort by: New Items</span>
+                                                <i class="fas fa-sort"></i>
+                                            </a>
+                                        </div>
+                                        <div class="sorts-menu-item_order">
+                                            <a href="#"><i class="selected fas fa-th-large"></i></a>
+                                            <a href="#"><i class="fas fa-th-list"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Responsive Mobile APP</span>
+                                                <span class="product-category">Site Template</span>
+                                            </div>
+                                            <span class="product-price">$19</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Radiustheme</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder hot-product">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">The Post Grid Pro</span>
+                                                <span class="product-category">WordPress Plugin</span>
+                                            </div>
+                                            <span class="product-price">$15</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">PsdBosS</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Food Menu</span>
+                                                <span class="product-category">WordPress Plugin</span>
+                                            </div>
+                                            <span class="product-price">$20</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Manilip</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Imac Mockup</span>
+                                                <span class="product-category">Psd Template</span>
+                                            </div>
+                                            <span class="product-price">$12</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Lolypop</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Responsive Mobile APP</span>
+                                                <span class="product-category">Site Template</span>
+                                            </div>
+                                            <span class="product-price">$19</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Radiustheme</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder hot-product">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">The Post Grid Pro</span>
+                                                <span class="product-category">WordPress Plugin</span>
+                                            </div>
+                                            <span class="product-price">$15</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">PsdBosS</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Food Menu</span>
+                                                <span class="product-category">WordPress Plugin</span>
+                                            </div>
+                                            <span class="product-price">$20</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Manilip</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">Responsive Mobile APP</span>
+                                                <span class="product-category">Site Template</span>
+                                            </div>
+                                            <span class="product-price">$19</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">Radiustheme</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="product-holder hot-product">
+                                        <div class="img-holder"></div>
+                                        <div class="product-info d-f fw-w jc-sb">
+                                            <div class="pr-info_container d-f fw-w">
+                                                <span class="product-name">The Post Grid Pro</span>
+                                                <span class="product-category">WordPress Plugin</span>
+                                            </div>
+                                            <span class="product-price">$15</span>
+                                        </div>
+                                        <div class="vendor-info d-f fw-w jc-sb ai-c">
+                                            <div class="vendor-item d-f fw-w ai-c">
+                                                <div class="vendor-logo"></div>
+                                                <span class="vendor-name">PsdBosS</span>
+                                            </div>
+                                            <div class="product-reiting_holder d-f fw-w ai-c">
+                                                <div class="icon-holder">
+                                                    <img src="../../images/stars-img.png"></img>
+                                                </div>
+                                                <span class="product-reiting_text">05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-selector_holder">
+                                    <ul class="page-selector d-f fw-w">
+                                        <li class="page-selector_active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                    </ul>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        //= ../block/footer.html
     </div>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="../../js//plugins/ion.rangeSlider.min.js"></script>
-<script src="../../js/pages/home.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../js/pages/ion.rangeSlider.min.js"></script>
+    <script src="../../js/pages/all-items.min.js"></script>
+    <script src="../../js/pages/header.min.js"></script>
 </body>
+
 </html>
