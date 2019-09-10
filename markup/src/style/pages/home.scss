@@ -168,17 +168,10 @@
             @include media('<=375px') {
                 align-self: flex-start;
             }
-
-            
         }
-        
     }
 
     .vendor {
-        &-item {
-           
-        }
-
         &-info {
             padding: 17px 30px 21px;
 
