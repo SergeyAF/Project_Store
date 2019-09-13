@@ -1,6 +1,7 @@
 $(function () {
     profileOpen();
     menuOpen();
+    loginEmulation ();
 });
 
 function dialogInit () {
@@ -25,8 +26,9 @@ $( "#opener" ).on( "click", function() {
 function profileOpen () {
   $('.js-opener').on('click', function(){
     if($(this).hasClass('active')){
-      $(this).removeClass('active');
+      $('.js-opener').removeClass('active');
   } else {
+      $('.js-opener').removeClass('active');
       $(this).addClass('active');
   }
   })
@@ -39,5 +41,22 @@ function menuOpen () {
   } else {
       $(this).addClass('active');
   }
+  })
+}
+
+function loginEmulation () {
+  $('.btn-logout').on('click', function(){
+    if($('header').hasClass('header-registr')){
+      $('header').removeClass('header-registr');
+      $('header').addClass('header-noregistr');
+  } 
+  })
+
+  $('.btn-form').on('click', function(){
+    if($('header').hasClass('header-noregistr')){
+      $('header').removeClass('header-noregistr');
+      $('header').addClass('header-registr');
+      $( "#dialog" ).dialog( "close" );
+  } 
   })
 }

@@ -18,5 +18,7 @@ function dialogInit () {
   
   $( "#opener" ).on( "click", function() {
       $( "#dialog" ).dialog( "open" );
+      $('.js-opener').removeClass('active');
+      $('.menu-holder').removeClass('active');
       });
   }
