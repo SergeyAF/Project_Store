@@ -5,22 +5,100 @@
 @import '../block/search_section';
 
 .upload_section {
-    .container {
-        padding: 50px 15px 110px;
+	background-color: #f4f6f5;
 
-        .holder {
-            width: 220px;
-        }
-        .sorts-holder {
-            width: calc(100% - 220px);
-            input {
-                width: 100%;
-                height: 40px;
-                background-color: #f9f9f9;
-                border: 1px solid #dedede;
-                margin-bottom: 20px;
-                padding: 0 16px;
+	.container {
+		padding: 50px 0 110px;
+
+		.upload-holder {
+			background-color: #fff;
+			border: 1px solid #dedede;
+
+			.title {
+				font-size: 24px;
+				padding: 27px 35px;
+				border: 1px solid #dedede;
+			}
+		}
+
+		.blank {
+			padding: 45px 50px 0 46px;
+            
+			.holder {
+				padding: 28px 31px 0 0;
+			
+				.sorks {
+						margin: 0 0 44px;
+
+						::before {
+								content: ('*');
+								position: absolute;
+								background-color: #555;
+						}
+				}
+
+					.sorks-2 {
+							margin: 0 0 158px;
+					}
+			}
+
+            .bottom {
+							::before {
+								margin-top: 12px;
+								margin-left: 850px;
+								position: absolute;
+								-webkit-rtl-ordering: logical;
+								color: #444444;
+								cursor: text;
+								padding: 1px;
+								-webkit-border-image: initial;
+								-o-border-image: initial;
+								border-image: initial;
             }
-        }
+
+            a {
+							::before {
+								margin-top: 12px;
+								margin-left: 850px;
+								position: absolute;
+								-webkit-rtl-ordering: logical;
+								color: #444444;
+								cursor: text;
+								padding: 1px;
+								-webkit-border-image: initial;
+								-o-border-image: initial;
+								border-image: initial;
+							}
+            }
+
+           .bottom {
+                ::before{
+                    position: absolute;
+                }
+            };
+
+        }        
+
+        .sorts-holder {
+            
+            padding: 0 0 20px 0;
+            width: calc(100% - 220px);
+           
+            .prod{
+                height: 150px;
+
+						.h1 {
+								padding: 10px;
+								margin: 0; 
+							}
+            }
+				}
+            input {
+							width: 100%;
+							height: 40px;
+							margin: 0 0 21px;
+            }
+
     }
+}
 }
