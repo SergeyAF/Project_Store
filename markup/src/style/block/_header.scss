@@ -49,6 +49,10 @@
 
     &-logout {
         background-color: $active_color;
+        @include media('<=625px') {
+            margin-bottom: 10px;
+            height: 26px;
+        }
     }
    
     &-form {
@@ -99,7 +103,18 @@
 }
 
 .header-top {
-    height: 90px;
+    justify-content: space-between;
+
+    .autorisation-holder {
+        flex-direction: row;
+    }
+    @include media('<=625px'){
+        justify-content: flex-start;
+
+        .autorisation-holder {
+            flex-direction: column-reverse;
+        }
+    }
 
     .logo-holder {
         padding: 25px 0;
@@ -127,6 +142,13 @@
         border-radius: 50%;
         background-color: #f5f5f5;
         margin: 0 8px;
+        cursor: pointer;
+        &:hover {
+            background-color: #d4d4d4;
+            .far, .fas {
+                color: $font_color_dark;
+            }
+        }
         
         .far, .fas {
             position: absolute;
@@ -138,6 +160,9 @@
         }
         &_holder {
             padding: 0 22px;
+            @include media('<=320px'){
+                padding: 0 10px;
+            }
         }
         &_notifications {
             /* display: none; */
@@ -166,14 +191,33 @@
     &_holder {
         font-size: 14px;
         padding: 0 12px;
+        position: relative;
+        cursor: pointer;
+        @include media('<=425px'){
+            padding: 0;
+            .up-menu_user-logo {
+                display: none;
+            }
+        }
+
+        &.active {
+            .login-list_holder {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
     &_user-name {
         .fas {
             color:#707070;
             font-size: 16px;
             margin-left: 10px;
+            @include media('<=425px'){
+                position: absolute;
+                bottom: 0;
+                right: 6px;
+            }
         }
-        
     }
     &_basket-cost {
         span {
@@ -376,18 +420,6 @@
         margin-bottom: 36px;
         cursor: default;
     }
-    &-info_holder {
-        padding: 0 13px;
-        position: relative;
-        cursor: pointer;
-    
-        &.active {
-            .login-list_holder {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
     &-list {
         padding: 10px 10px 20px;  
 
@@ -402,6 +434,9 @@
             opacity: 0;
             visibility: hidden;
             border: 1px solid #d3d3d3;
+            @include media('<=625px'){
+                top: 44px;
+            }
 
         }
         li {
@@ -500,6 +535,17 @@
     &-registr {
         .d-nr {
             display: none;
+        }
+    }
+
+    &-btn_list {
+        @include media('<=625px'){
+            position: absolute;
+            top: 21px;
+            right: 20px;
+            height: 140px;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
