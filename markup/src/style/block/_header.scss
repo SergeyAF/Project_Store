@@ -155,13 +155,6 @@
                 background-color: #ef6c00;
             }
         }
-        &_basket {
-            &::after {
-                @extend .small-circle_counter;
-                content: '8';
-                background-color: #95c85a;
-            }
-        }
         &_user-logo {
             background-color: #b5b5b5;
             border: 1px solid #c3ddde;
@@ -511,51 +504,109 @@
     }
 
 }
-.basket {
-    &-list {
-        &_holder {
-            @include animate(opacity visibility);
-            position: absolute; 
-            top: 62px;
-            right: 0;
-            width: 160px;
-            background-color: #fff;
-            z-index: 10;
-            opacity: 0;
-            visibility: hidden;
-            border: 1px solid #d3d3d3;
 
+.up-menu_basket {
+    position: relative;
+    &::after {
+        @extend .small-circle_counter;
+        content: '8';
+        background-color: #95c85a;
+    }
+    &.active {
+        .basket-list_holder {
+            opacity: 1;
+            visibility: visible;
         }
-        li {
-            position: relative;
+        .fas {
+            color: $font_color_dark;
+        }
+    }
+    
 
-            &::before {
-                content: '\f105';
-                position: absolute;
-                top: 10px;
-                left: 5px;
-                color: #8bc34a;
-                -webkit-font-smoothing: antialiased;
-                display: block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                line-height: 1;
-                font-family: Font Awesome\ 5 Free;
-                font-weight: 900;
-                font-size: 14px;
+    .basket {
+        &-list {
+            &_holder {
+                @include animate(opacity visibility);
+                position: absolute; 
+                top: 62px;
+                right: 0;
+                width: 268px;
+                background-color: #fff;
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                border: 1px solid #d3d3d3;
             }
+            &_total {
+                padding: 16px 13px 12px;
 
-            a {
-                display: block;
-                padding: 10px 20px;
-                color: $font_color_light;
-                font-size: 12px;
-                font-family: $def_p_font;
-
-                &:hover {
-                    color: $label_color;
+                .text-holder {
+                    width: 100%;
+                    padding: 0 25px 0 15px;
+                    margin-bottom: 17px;
+                    font-family: $def_h_font;
                 }
+                .btn-flyout {
+                    padding: 8px 0 9px;
+                    color: #fff;
+                    font-family: $def_h_font;
+                    font-size: 14px;
+                    border: 1px solid transparent;
+                    background-color: transparent;
+                    margin: 0 3px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .btn-cart {
+                    background-color: $label_color;
+                    width: 105px;
+                    &:hover {
+                        color: $label_color;
+                        background-color: #fff;
+                        border: 1px solid $label_color;
+                    }
+                }
+                .btn-checkout {
+                    background-color: $active_color;
+                    width: 123px;
+                    &:hover {
+                        color: $active_color;
+                        background-color: #fff;
+                        border: 1px solid $active_color;
+                    }
+                }
+            }
+        }
+        &-product_holder {
+            padding: 20px 22px 22px;
+            border-bottom: 1px solid #d3d3d3;
+
+            .img-holder {
+                display: block;
+                width: 73px;
+                height: 57px;
+                background-color: #d4d4d4;
+            }
+            .text-holder {
+                padding-left: 15px;
+
+                .product{
+                    &-name{
+                        font-size: 15px;
+                        margin-bottom: 5px;
+                    }
+                    &-category {
+                        font-family: $def_p_font;
+                        font-size: 12px;
+                        color: $label_color;
+                        margin-bottom: 10px;
+                        padding-left: 2px;
+                    }
+                    &-price {
+                        padding-left: 2px;
+                    }
+                 }
             }
         }
     }
