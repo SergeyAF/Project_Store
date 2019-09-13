@@ -12,6 +12,13 @@
         .input-holder {
             margin-bottom: 24px;
         }
+        @include media('<=768px'){
+            padding: 90px 0;
+        }
+
+        @include media('<=550px'){
+            padding: 65px 0;
+        }
     }
     &-head {
         display: block;
@@ -19,6 +26,7 @@
     &-h {
         margin-bottom: 55px;
     }
+
 }
 
 .tabs {
@@ -168,10 +176,7 @@
             @include media('<=375px') {
                 align-self: flex-start;
             }
-
-            
         }
-        
     }
 
     .vendor {
