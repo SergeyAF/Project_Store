@@ -29,6 +29,7 @@ function profileOpen () {
       $('.js-opener').removeClass('active');
   } else {
       $('.js-opener').removeClass('active');
+      $('.menu-holder').removeClass('active');
       $(this).addClass('active');
   }
   })
@@ -39,6 +40,7 @@ function menuOpen () {
     if($(this).hasClass('active')){
       $(this).removeClass('active');
   } else {
+      $('.js-opener').removeClass('active');
       $(this).addClass('active');
   }
   })
