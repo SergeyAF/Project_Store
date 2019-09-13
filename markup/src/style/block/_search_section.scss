@@ -9,31 +9,19 @@
         padding: 59px 0;
         background-image: url(../../images/visual-bg.jpg);
         
-        @include media('<=768px'){
-            padding: 90px 0;
-        }
-
-        @include media('<=550px'){
-            padding: 65px 0;
-        }
-        .input-holder {
+                .input-holder {
             position: relative;
             width: 670px;
             margin-bottom: 10px;
 
             @include media('<=768px'){
-                width: 420px;
+                width: 600px;
             }
 
-            @include media('<=700px'){
-                width: 420px;
-            }
-
-            
-            @include media('<=550px'){
+            @include media('<=690px'){
                 width: 100%;
             }
-
+            
             .fa-search {
                 position: absolute;
                 top: 52%;
