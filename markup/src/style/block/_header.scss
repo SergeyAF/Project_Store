@@ -48,17 +48,19 @@
 
 .menu_item-holder-def {
     border-bottom: 1px solid #d3d3d3;
-    
-
     &:last-child {
         border-bottom: none;
     }
 }
+
 .menu_item-def {
     padding: 18px 30px 21px 21px;
     position: relative;
 
-    
+    &:hover {
+        box-shadow: inset 0 0 4px #d3d3d3;
+    }
+
     .img-holder {
         width: 48px;
         height: 48px;
@@ -575,6 +577,9 @@
         &-product_holder {
             padding: 20px 22px 22px;
             border-bottom: 1px solid #d3d3d3;
+            &:hover {
+                box-shadow: inset 0 0 4px #d3d3d3;
+            }
 
             .img-holder {
                 display: block;
@@ -639,6 +644,7 @@
         }
         &_item {
             @extend .menu_item-def;
+
             &-holder {
                 @extend .menu_item-holder-def;
             }
