@@ -511,78 +511,68 @@
     }
 }
 
-.select{
-    &-holder {
-        width: 100%;
-        background-color: #fff;
-        border: 1px solid #d5d5d5;
-    }
+.product-rows-block,
+.product-list-block {
+    width: 100%;
 }
 
 .select {
-    
+    &-holder {
+        width: 100%;
+        background-color: $white;
+        border: 1px solid #d3d3d3;
+    }
+
     &-block {
         position: relative;
-        
+
         .js-opener {
-            &.active ~ .dropdown-holder{
+            &.active ~ .dropdown-holder {
                 opacity: 1;
                 visibility: visible;
             }
         }
-        
     }
+
     &-opener {
         background-color: transparent;
         border: none;
         padding: 20px 60px 20px 30px;
-        border-right: 1px solid #d5d5d5;
-        
-        &:focus {
-            outline: none;
-        }
+        border-right: 1px solid #d3d3d3;
     }
+
     &-list {
-        width: 286px;
         padding: 10px;
+        width: 286px;
+
         a {
             padding: 10px 20px 10px 25px;
         }
     }
-
-    &-icon {
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 18px;
-        background-color: #fff;
-        top: 50%;
-        right: 30px;
-        transform: translateY(-50%);
-    }
 }
 
-.dropdown-holder {
-    @include animate(opacity, visibility);
 
-    position: absolute;
-    visibility: hidden;
+.dropdown-holder {
+    @include animate(opacity visibility);
+
     opacity: 0;
+    visibility: hidden;
+    position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    border: 1px solid #d5d5d5;
+    background-color: $white;
+    border: 1px solid #d3d3d3;
     min-width: 100%;
     padding: 15px;
 
     .price-slider {
-        width: 286px;
+        width: 268px;
         padding-left: 25px;
         padding-right: 25px;
     }
 }
 
-.sorts {
+.sort {
     &-title {
         display: block;
         margin-right: 5px;
@@ -591,30 +581,39 @@
         border: none;
         outline: none;
     }
-    &-menu {
-        padding: 0 26px;
-    }
-    
+}
+
+.select-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 20px;
+    height: 17px;
+    background-color: $white;
 }
 
 .change-btn {
-    &_list {
-        padding: 0 19px;
+    &-list {
+
+        padding: 5px 20px;
+
         li {
             padding: 7px;
-        
-            &.active-product_block {
+
+            &.active-product-block {
                 a {
                     color: $label_color;
                 }
             }
-        }
 
-        a {
-            @include animate(opacity);
-           
-            &:hover {
-                opacity: 0.7;
+            a {
+                @include animate(opacity);
+                color: #90a4ae;
+
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
     }
