@@ -14,10 +14,14 @@ span {
     list-style: none;
 }
 
-body, *{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+}
+
+body {
     font-family: $def_font, 'arial';
     color: $font_color_dark;
     line-height: 1;
@@ -133,7 +137,9 @@ li {
     flex-direction: column;
 }
 
-
+.pos-r{
+    position: relative;
+}
 
 .p-r {
     position: relative;

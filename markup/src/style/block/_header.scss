@@ -13,6 +13,81 @@
     font-family: 'opensans_semibold', sans-serif;
 }
 
+.menu-default__holder {
+    @include animate(opacity visibility);
+    position: absolute; 
+    top: 62px;
+    right: 0;
+    width: 268px;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid #d3d3d3;
+
+    @include media('<=625px'){
+        top: 0;
+        right: 45px;
+    }
+
+    @include media('<=625px'){
+        top: 40px;
+        right: 0;
+    }
+}
+
+.menu_item-icon_def {
+    position: absolute;
+    top: 26px;
+    right: 29px;
+    line-height: 1;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 400;
+    color: #b0bec5;
+}
+
+.menu_item-def {
+    padding: 18px 30px 21px 21px;
+    border-bottom: 1px solid #d3d3d3;
+    position: relative;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .img-holder {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: $product_img_bg;
+        border: 1px solid #c3ddde;
+    }
+
+    .text-holder {
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    .item {
+        &-vendor {
+            font-family: $def_h_font;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &-title {
+            font-family: $def_p_font;
+            font-size: 11px;
+            color: $label_color;
+            margin-bottom: 8px;
+        }
+        &-date {
+            font-family: $def_p_font;
+            font-size: 10px;
+            color: #707070;
+        }
+    }
+}
+
 .btn {
     cursor: pointer;
     border: none;
@@ -164,22 +239,6 @@
                 padding: 0 10px;
             }
         }
-        &_notifications {
-            /* display: none; */
-            &::after {
-                @extend .small-circle_counter;
-                content: '8';
-                background-color: #fcb322;
-            }
-        }
-        &_messages {
-            /* display: none; */
-            &::after {
-                @extend .small-circle_counter;
-                content: '5';
-                background-color: #ef6c00;
-            }
-        }
         &_user-logo {
             background-color: #b5b5b5;
             border: 1px solid #c3ddde;
@@ -238,6 +297,7 @@
 
         .menu-holder {    
             justify-content: flex-start;
+            width: 50px;
         }
             }
 
@@ -247,6 +307,21 @@
             .menu-list {
                 visibility: visible;
                 opacity: 1; 
+            }
+
+            .nav-opener {
+                span {
+                    display: none;
+                }
+                &::before {
+                    top: 43%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                
+                &::after {
+                    bottom: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
             }
         }
 
@@ -264,6 +339,7 @@
                 margin-left: 10px;
             }
 
+  
             &:focus {
                 outline: none;
             }
@@ -553,7 +629,6 @@
 }
 
 .up-menu_basket {
-    position: relative;
     &::after {
         @extend .small-circle_counter;
         content: '8';
@@ -573,19 +648,7 @@
     .basket {
         &-list {
             &_holder {
-                @include animate(opacity visibility);
-                position: absolute; 
-                top: 62px;
-                right: 0;
-                width: 268px;
-                background-color: #fff;
-                z-index: 10;
-                opacity: 0;
-                visibility: hidden;
-                border: 1px solid #d3d3d3;
-                @include media('<=625px'){
-                    top: 44px;
-                }
+                @extend .menu-default__holder;
             }
             &_total {
                 padding: 16px 13px 12px;
@@ -604,6 +667,7 @@
                     border: 1px solid transparent;
                     background-color: transparent;
                     margin: 0 3px;
+                    cursor: pointer;
                     &:focus {
                         outline: none;
                     }
@@ -657,6 +721,129 @@
                         padding-left: 2px;
                     }
                  }
+            }
+        }
+    }
+}
+
+.up-menu_messages {
+
+    &::after {
+        @extend .small-circle_counter;
+        content: '5';
+        background-color: #ef6c00;
+    }
+
+    &.active {
+        .messages-list_holder {
+            opacity: 1;
+            visibility: visible;
+        }
+        .far {
+            color: $font_color_dark;
+        }
+    } 
+
+    .messages {
+        &-list {
+            &_holder {
+                @extend .menu-default__holder;
+                @include media('<=625px'){
+                    top: 16px;
+                }
+                @include media('<=320px'){
+                    top: 93px;
+                }
+            }
+        }
+        &_item {
+            @extend .menu_item-def;
+        }
+
+        &_new {
+            &:after{
+                @extend .menu_item-icon_def;
+                color: #ef6c00;
+                content: '\f0e0';
+            }
+        }
+        &_read {
+            &::after{
+                @extend .menu_item-icon_def;
+                content: '\f0e0';
+            }
+        }
+
+        &_reply {
+            &::after {
+                @extend .menu_item-icon_def;
+                content: '\f3e5';
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.up-menu_notifications {
+
+    &::after {
+        @extend .small-circle_counter;
+        content: '8';
+        background-color: #fcb322;
+    }
+
+    &.active {
+        .notifications-list_holder {
+            opacity: 1;
+            visibility: visible;
+        }
+        .far {
+            color: $font_color_dark;
+        }
+    } 
+
+    .notifications {
+        &-list {
+            &_holder {
+                @extend .menu-default__holder;
+                @include media('<=670px'){
+                    left: 0;
+                    right: auto;
+                }
+                @include media('<=625px'){
+                    left: auto;
+                    right: 45px;
+                    top: 69px;
+                }
+
+                @include media('<=320px'){
+                    top: 146px;
+                    right: 0;
+                }
+
+                .text-holder {
+                    padding-top: 8px;
+                }
+                .item-title {
+                    font-size: 12px;
+                }
+            }
+        }
+        &_item {
+            @extend .menu_item-def;
+        }
+
+        &_new {
+            &:after{
+                @extend .menu_item-icon_def;
+                color: #ef6c00;
+                content: '\f0f3';
+            }
+        }
+        &_read {
+            &::after{
+                @extend .menu_item-icon_def;
+                content: '\f0f3';
             }
         }
     }
