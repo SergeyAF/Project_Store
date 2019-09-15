@@ -130,10 +130,14 @@
                                         <div class="sorts-menu d-f fw-w ai-c jc-sb">
                                             <div class="sorts-menu-list d-f fw-w ai-c">
                                                 <a href="#"><i class="fas fa-sort-amount-down"></i></a>
-                                                <a class="d-f fw-w ai-c" href="#">
-                                                    <span class="sorts-type">Sort by: New Items</span>
-                                                    <i class="fas fa-sort"></i>
-                                                </a>
+                                                <span class="sorts-title">Sort by:</span>
+                                                <select name="sorts-select" id="sorts-select" class="sorts-select">
+                                                    <option value="1">New Items</option>
+                                                    <option value="2">Old Items</option>
+                                                    <option value="3">Up Price</option>
+                                                    <option value="4">Down Price</option>
+                                                </select>
+                                                <span class="select-icon"><i class="fas fa-sort"></i></span>
                                             </div>
                                             <div class="sorts-menu-item_order">
                                                 <a href="#"><i class="selected fas fa-th-large"></i></a>
@@ -443,30 +447,30 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="product-rows_blcok d-f fw-w pos-r">
+                    <div class="product-rows_block d-f fw-w pos-r">
                         <div class="select-holder d-f fw-w jc-fs ai-c jc-sb">
                             <div class="d-f">
                                 <div class="select-block">
                                     <button class="js-opener select-opener">Categories</button>
                                     <div class="dropdown-holder">
                                         <ul class="select-list">
-                                            <li class="d-f fw-w jc-sb">
+                                            <li class="d-f jc-sb ai-c">
                                                 <a href="#">WordPress</a>
                                                 <span class="product-quantity">(150)</span>
                                             </li>
-                                            <li class="d-f fw-w jc-sb">
+                                            <li class="d-f jc-sb ai-c">
                                                 <a href="#">Joomla</a>
                                                 <span class="product-quantity">(100)</span>
                                             </li>
-                                            <li class="d-f fw-w jc-sb">
+                                            <li class="d-f jc-sb ai-c">
                                                 <a href="#">PSD</a>
                                                 <span class="product-quantity">(50)</span>
                                             </li>
-                                            <li class="d-f fw-w jc-sb">
+                                            <li class="d-f jc-sb ai-c">
                                                 <a href="#">Plugins</a>
                                                 <span class="product-quantity">(60)</span>
                                             </li>
-                                            <li class="d-f fw-w jc-sb">
+                                            <li class="d-f jc-sb ai-c">
                                                 <a href="#">Components</a>
                                                 <span class="product-quantity">(40)</span>
                                             </li>
@@ -492,10 +496,7 @@
                                                 <option value="3">Up Price</option>
                                                 <option value="4">Down Price</option>
                                             </select>
-                                            <i class="select-icon fas fa-sort"></i>
-                                        </div>
-                                        <div class="sorts-menu-item_order">
-
+                                            <span class="select-icon"><i class="fas fa-sort"></i></span>
                                         </div>
                                     </div>
                                 </div>
@@ -505,6 +506,26 @@
                                 <li class="active-product_block"><a href="#"><i class="selected fas fa-th-list"></i></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="product-holder">
+                            <div class="product-item d-f">
+                                <a href="#" class="product-img_holder"></a>
+                                <div class="product-description">
+                                    <a href="#" class="product-description_top d-f jc-sb ai-c">
+                                        <div class="product_vendor-holder d-f fd-c">
+                                            <span class="product-name">Funy Doll Face</span>
+                                            <span class="product-category">Illastration</span>
+                                        </div>
+                                        <span class="product_info">Pimply dummy text of the printing and typesetting industry.</span>
+                                        <span class="product-price">$19</span>
+                                        <div class="product-saleout">
+                                            <span>Sales( <span class="product-saleout_quantity">14</span> )</span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <div class="product-description_bottom"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
