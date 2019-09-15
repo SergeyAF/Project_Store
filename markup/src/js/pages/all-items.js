@@ -44,7 +44,7 @@ $(function () {
           }
     });
   }
-}
+
 
 function asideOpen() {
   $('.aside-opener').on('click', function () {

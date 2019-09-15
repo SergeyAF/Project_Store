@@ -58,7 +58,6 @@
             &.ui-state-active {
                 a {
                     background-color: $active_color;
-                    /* padding: 13px 27px; */
                     color: #fff;
                 }
 
@@ -76,7 +75,6 @@
             background-color: #fff;
             line-height: 1;
             font-size: $product_category_fs;
-            color: $font_color_dark;
 
             &:hover {
                 background-color: #ec5849;
@@ -138,10 +136,6 @@
         padding: 20px 32px;
         border-bottom: 1px solid #e7ecf2;
 
-        // @include media('<=375px') {
-        //     flex-direction: column;
-        //     padding: 15px 32px;
-        // }
         @include media('<=927px'){
             padding: 20px;
           }
@@ -169,7 +163,6 @@
         }
 
         .product-price {
-            font-family: $def_h_font, 'arial';
             font-size: $product_price_fs;
             align-self: center;
 
@@ -458,7 +451,6 @@
     &-block {
         background-color: $label_color;
         max-width: 700px;
-        // height: 215px;
         padding: 80px 60px;
 
         @include media ('<=768px') {
