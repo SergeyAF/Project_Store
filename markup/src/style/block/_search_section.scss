@@ -22,13 +22,17 @@
                 width: 100%;
             }
             
-            .fa-search {
+            .search-btn {
                 position: absolute;
                 top: 52%;
                 right: 20px;
                 transform: translateY(-50%);
                 font-size: 20px;
                 color: #78909c;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
             }
               
             input {
