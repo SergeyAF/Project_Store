@@ -1,11 +1,11 @@
 $(function () {
-    profileOpen();
-    menuOpen();
-    loginEmulation ();
+  profileOpen();
+  menuOpen();
+  loginEmulation();
 });
 
-function dialogInit () {
-  $( "#dialog" ).dialog({
+function dialogInit() {
+  $("#dialog").dialog({
     width: 730,
     autoOpen: false,
     show: {
@@ -18,47 +18,47 @@ function dialogInit () {
     }
   });
 
-$( "#opener" ).on( "click", function() {
-    $( "#dialog" ).dialog( "open" );
-    });
+  $("#opener").on("click", function () {
+    $("#dialog").dialog("open");
+  });
 }
 
-function profileOpen () {
-  $('.js-opener').on('click', function(){
-    if($(this).hasClass('active')){
+function profileOpen() {
+  $('.js-opener').on('click', function () {
+    if ($(this).hasClass('active')) {
       $('.js-opener').removeClass('active');
-  } else {
+    } else {
       $('.js-opener').removeClass('active');
       $('.menu-holder').removeClass('active');
       $(this).addClass('active');
-  }
-  })
+    }
+  });
 }
 
-function menuOpen () {
-  $('.menu-holder').on('click', function(){
-    if($(this).hasClass('active')){
+function menuOpen() {
+  $('.menu-holder').on('click', function () {
+    if ($(this).hasClass('active')) {
       $(this).removeClass('active');
-  } else {
+    } else {
       $('.js-opener').removeClass('active');
       $(this).addClass('active');
-  }
+    }
   })
 }
 
-function loginEmulation () {
-  $('.btn-logout').on('click', function(){
-    if($('header').hasClass('header-registr')){
+function loginEmulation() {
+  $('.btn-logout').on('click', function () {
+    if ($('header').hasClass('header-registr')) {
       $('header').removeClass('header-registr');
       $('header').addClass('header-noregistr');
-  } 
+    }
   })
 
-  $('.btn-form').on('click', function(){
-    if($('header').hasClass('header-noregistr')){
+  $('.btn-form').on('click', function () {
+    if ($('header').hasClass('header-noregistr')) {
       $('header').removeClass('header-noregistr');
       $('header').addClass('header-registr');
-      $( "#dialog" ).dialog( "close" );
-  } 
+      $("#dialog").dialog("close");
+    }
   })
 }
