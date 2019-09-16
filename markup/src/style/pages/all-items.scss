@@ -209,8 +209,8 @@
     width: 300px;
 
     @include media('<1024px'){
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 150px;
         left: 0;
         background-color: #f4f6f5;
         overflow: hidden;
@@ -276,6 +276,7 @@
 
         @include media ('<1024px') {
             display: block;
+            z-index: 12;
 
             .active-aside & {
                 display: none;
@@ -287,6 +288,7 @@
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
+        z-index: 1;
     }
     
     .bg-white {
@@ -722,6 +724,9 @@
             color: #707070;
             font-family: $def_p_font;
             font-size: 14px;
+            @include media('<=890px') {
+                display: none;
+            }
         }
         &-price {
             font-size: 30px;
