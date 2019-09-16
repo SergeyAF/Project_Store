@@ -230,6 +230,11 @@
             }
         }
         
+        &_counter {
+            @extend .small-circle_counter;
+            background-color: #95c85a;
+
+        }
         .far, .fas {
             position: absolute;
             top: 50%;
@@ -510,11 +515,6 @@
 }
 
 .up-menu_basket {
-    &::after {
-        @extend .small-circle_counter;
-        content: '8';
-        background-color: #95c85a;
-    }
     &.active {
         .basket-list_holder {
             opacity: 1;
@@ -613,9 +613,7 @@
 
 .up-menu_messages {
 
-    &::after {
-        @extend .small-circle_counter;
-        content: '5';
+    .up-menu_counter {
         background-color: #ef6c00;
     }
 
@@ -676,9 +674,7 @@
 
 .up-menu_notifications {
 
-    &::after {
-        @extend .small-circle_counter;
-        content: '8';
+    .up-menu_counter {
         background-color: #fcb322;
     }
 

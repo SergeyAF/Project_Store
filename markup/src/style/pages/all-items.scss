@@ -545,6 +545,7 @@
         
     }
     &-opener {
+        position: relative;
         background-color: transparent;
         border: none;
         padding: 20px 60px 20px 30px;
@@ -552,6 +553,20 @@
         color: #263238;
         font-size: 16px;
         font-family: $def_font;
+
+        &:after {
+            position: absolute;
+            content: '\f107';
+            font-style: normal;
+            line-height: 1;
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+            font-size: 18px;
+            color: #707070;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 33px;
+        }
         
         &:focus {
             outline: none;
