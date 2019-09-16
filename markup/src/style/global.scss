@@ -13,7 +13,6 @@ span {
 %list-reset {
     list-style: none;
 }
-
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +21,7 @@ span {
 }
 
 body {
-    font-family: $def_font, 'arial';
+    font-family: $def_font, 'sans-serif';
     color: $font_color_dark;
     line-height: 1;
 }
