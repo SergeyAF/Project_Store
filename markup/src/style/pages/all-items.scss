@@ -133,7 +133,7 @@
         
         &_holder {
             width: 100%;
-            padding: 0 15px;
+            padding: 30px 15px 0;
         }
         
         li {
@@ -291,7 +291,7 @@
     
     .bg-white {
         background-color: #fff;
-        padding: 25px 30px 30px;
+        padding: 23px 30px 30px;
         margin: 0 0 30px;
         border: 1px solid #dedede;
 
@@ -307,7 +307,7 @@
             &-list {
                 li {
                     position: relative;
-                    margin-bottom: 28px;
+                    margin-bottom: 25px;
                     font-size: 15px;
                     font-family: $def_p_font;
                     &:last-child {
@@ -342,7 +342,7 @@
                 }
                 
                 &_holder {
-                    padding: 19px 0 19px 18px;
+                    padding: 17px 0 14px 18px;
                 }
             }
         }
@@ -352,6 +352,7 @@
         font-family: $def_h_font;
         display: block;
         margin-bottom: 20px;
+        font-size: 20px;
     }
 
     &-top_ten {
@@ -361,8 +362,7 @@
                 background-color: #fff;
                 padding: 27px 0;
                 border-top: 1px solid #dde3e8;
-                cursor: pointer;
-            
+                 
                 &:hover {
                     .img-holder {
                         background-color: #bebebe;
@@ -405,7 +405,7 @@
                 
         }
         
-        .vendor {
+        .vendor-item {
             @extend .vendor__def-styles;
         }
     }
@@ -415,7 +415,6 @@
     @include animate (box-shadow);
     background-color: #fff;
     border: 1px solid #e7ecf2;
-    cursor: pointer;
 
     &:hover {
         box-shadow: 0 15px 15px -7px #ccc;
