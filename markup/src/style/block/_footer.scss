@@ -278,3 +278,129 @@
         opacity: 0.7;
     }
 }
+
+.login {
+    &-form {
+        max-width: 400px;
+        margin: 0 auto 23px;
+
+        &_popup {
+            background-color: $label_color;
+            padding: 84px 90px 112px;
+            position: relative;
+            z-index: 1;
+
+            .lost {
+                color: #fff;
+                font-family: $def_p_font;
+                font-size: 18px;
+                &:hover {
+                    color: #000;
+                }
+
+                &-holder{
+                    display: block;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .modal-input-holder {
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+
+            input {
+                @include placeholder {
+                    color: $white;
+                }
+                font-family: $def_p_font;
+                font-size: 14px;
+                width: 100%;
+                background-color: #76ae36;
+                border: none;
+                height: 43px;
+                padding: 10px 40px;
+                outline: none;
+            }
+
+            i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+       
+    }
+
+    &-pass_holder{
+        margin-bottom: 19px;
+    }
+
+    &-title {
+        font-family: $def_h_font;
+        text-transform: uppercase;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 36px;
+        cursor: default;
+    }
+    &-list {
+        padding: 10px 10px 20px;  
+
+        &_holder {
+            @include animate(opacity visibility);
+            position: absolute; 
+            top: 62px;
+            right: 0;
+            width: 160px;
+            background-color: #fff;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            border: 1px solid #d3d3d3;
+            @include media('<=625px'){
+                top: 44px;
+            }
+
+        }
+        li {
+            position: relative;
+
+            &::before {
+                content: '\f105';
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                color: #8bc34a;
+                -webkit-font-smoothing: antialiased;
+                display: block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-family: Font Awesome\ 5 Free;
+                font-weight: 900;
+                font-size: 14px;
+            }
+
+            a {
+                display: block;
+                padding: 10px 20px;
+                color: $font_color_light;
+                font-size: 12px;
+                font-family: $def_p_font;
+
+                &:hover {
+                    color: $label_color;
+                }
+            }
+        }
+    }
+}
