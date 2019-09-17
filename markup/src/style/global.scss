@@ -189,6 +189,7 @@ li {
 
 .fd-w {
     flex-direction: row;
+}
 
 .pos-r{
     position: relative;
@@ -231,6 +232,16 @@ li {
 .index-header {
     margin: 20px 0;
     color: $active_color;
+    &_list {
+        li {
+            margin-bottom: 10px;
+            a {
+                &:hover {
+                    color: $label_color;
+                }
+            }
+        }
+    }
 }
 
 .btn-default {
