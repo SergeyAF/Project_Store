@@ -106,6 +106,53 @@ li {
     margin-bottom: 60px;
 }
 
+.breadcrumbs {
+    &-holder {
+        width: 100%;
+        padding: 50px 0 45px;
+    }
+
+    &-nav {
+        &_list {
+            margin: 0 -10px;
+
+            li {
+                position: relative;
+                padding: 0 10px;
+                font-size: 14px;
+                font-family: $def_p_font, sans-serif;
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '-';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -4px;
+                    color: #8bc34a;
+                }
+
+                a {
+                    color: $font_p_color;
+                    &:hover {
+                        color: $label_color;
+                        font-family: $def_h_font;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-color {
+    background-color: $conatiner_bg_light;
+}
+
 .text-center {
     text-align: center;
 }
@@ -115,6 +162,10 @@ li {
 
 .fw-w {
     flex-wrap: wrap;
+}
+
+.fd-c {
+    flex-direction: column;
 }
 
 .jc-c {
@@ -135,6 +186,9 @@ li {
 .fd-c {
     flex-direction: column;
 }
+
+.fd-w {
+    flex-direction: row;
 
 .pos-r{
     position: relative;
